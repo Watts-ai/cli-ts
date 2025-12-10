@@ -30,7 +30,7 @@ This parser will fail to parse if:
 ### Usage
 
 ```ts
-import { command, number, option } from 'cmd-ts';
+import { command, number, option } from '@watts-ai/cli.ts';
 
 const myNumber = option({
   type: number,
@@ -49,7 +49,7 @@ const cmd = command({
 The `onMissing` callback provides a way to dynamically generate values when an option is not provided. This is perfect for interactive prompts:
 
 ```ts
-import { command, option, string } from './src';
+import { command, option, string } from '@watts-ai/cli.ts';
 import { createInterface } from 'readline/promises';
 
 const name = option({
@@ -108,8 +108,8 @@ This parser will fail to parse if:
 Like single options, `multioption` supports `onMissing` callbacks for dynamic default arrays:
 
 ```ts
-import { command, multioption } from 'cmd-ts';
-import type { Type } from 'cmd-ts';
+import { command, multioption } from '@watts-ai/cli.ts';
+import type { Type } from '@watts-ai/cli.ts';
 
 const stringArray: Type<string[], string[]> = {
   async from(strings) {

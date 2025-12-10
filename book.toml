@@ -1,6 +1,6 @@
 [book]
-authors = ["Gal Schlezinger"]
+authors = ["Watts AI"]
 language = "en"
 multilingual = false
 src = "docs"
-title = "cmd-ts"
+title = "@watts-ai/cli.ts"

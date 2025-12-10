@@ -1,12 +1,12 @@
 # Parsers and Combinators
 
-`cmd-ts` can help you build a full command line application, with nested commands, options, arguments, and whatever you want. One of the secret sauces baked into `cmd-ts` is the ability to compose parsers.
+`@watts-ai/cli.ts` can help you build a full command line application, with nested commands, options, arguments, and whatever you want. One of the secret sauces baked into `@watts-ai/cli.ts` is the ability to compose parsers.
 
 ## Argument Parser
 
 An argument parser is a simple struct with a `parse` function and an optional `register` function.
 
-`cmd-ts` is shipped with a couple of parsers and combinators to help you build your dream command-line app. [`subcommands`](./parsers/subcommands.md) are built using nested [`command`](./parsers/command.md)s. Every [`command`](./parsers/command.md) is built with [`flag`](./parsers/flags.md), [`option`](./parsers/options.md) and [`positional`](./parsers/positionals.md) arguments. Here is a short parser description:
+`@watts-ai/cli.ts` is shipped with a couple of parsers and combinators to help you build your dream command-line app. [`subcommands`](./parsers/subcommands.md) are built using nested [`command`](./parsers/command.md)s. Every [`command`](./parsers/command.md) is built with [`flag`](./parsers/flags.md), [`option`](./parsers/options.md) and [`positional`](./parsers/positionals.md) arguments. Here is a short parser description:
 
 - [`positional` and `restPositionals`](./parsers/positionals.md) to read arguments by position
 - [`option` and `multioption`](./parsers/options.md) to read binary `--key value` arguments

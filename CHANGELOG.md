@@ -1,4 +1,4 @@
-# cmd-ts
+# @watts-ai/cli.ts
 
 ## 0.14.3
 

@@ -21,7 +21,7 @@ import chalk from "chalk";
  *
  * Also, using `console.log` is something we'd rather avoid and return strings, and if returning strings
  * would be harmful for performance we might ask for a stream to write to:
- * Printing to stdout and stderr means that we don't control the values and it ties us to only use `cmd-ts`
+ * Printing to stdout and stderr means that we don't control the values and it ties us to only use `@watts-ai/cli.ts`
  * with a command line, and again, to mock `stdout` and `stderr` it if we want to test it.
  */
 export class Exit {

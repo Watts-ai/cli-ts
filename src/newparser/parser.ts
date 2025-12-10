@@ -2,7 +2,7 @@ import createDebugger from "debug";
 import type { RegisterOptions } from "../argparser";
 import type { Token } from "./tokenizer";
 
-const debug = createDebugger("cmd-ts:parser");
+const debug = createDebugger("@watts-ai/cli.ts:parser");
 
 export type AstNode =
 	| Value

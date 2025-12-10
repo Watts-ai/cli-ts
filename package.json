@@ -1,9 +1,9 @@
 {
-	"name": "cmd-ts",
+	"name": "@watts-ai/cli.ts",
 	"version": "0.14.3",
-	"homepage": "https://cmd-ts.now.sh",
+	"homepage": "https://github.com/watts-ai/cli.ts",
 	"license": "MIT",
-	"author": "Gal Schlezinger",
+	"author": "Watts AI",
 	"main": "dist/cjs/index.js",
 	"typings": "dist/cjs/index.d.ts",
 	"module": "dist/esm/index.js",

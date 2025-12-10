@@ -9,7 +9,7 @@ Let's say we're about to write a `cat` clone. We want to accept a file to read i
 ```ts
 // my-app.ts
 
-import { command, run, positional, string } from 'cmd-ts';
+import { command, run, positional, string } from '@watts-ai/cli.ts';
 
 const app = command({
   /// name: ...,
@@ -33,18 +33,18 @@ That works well! We already get autocomplete from TypeScript and we're making pr
 
 > 💡 What if we had a way to get a `Stream` out of the parser, instead of a plain string?
 
-This is where `cmd-ts` gets its power from,
+This is where `@watts-ai/cli.ts` gets its power from,
 
 ### Custom Type Decoding
 
-Exported from `cmd-ts`, the construct `Type<A, B>` is a way to declare a type that can be converted from `A` into `B`, in a safe manner. `cmd-ts` uses it to decode the arguments provided. You might've seen the `string` type, which is `Type<string, string>`, or, the identity: because every string is a string. Constructing our own types let us have all the implementation we need in an isolated and easily composable.
+Exported from `@watts-ai/cli.ts`, the construct `Type<A, B>` is a way to declare a type that can be converted from `A` into `B`, in a safe manner. `@watts-ai/cli.ts` uses it to decode the arguments provided. You might've seen the `string` type, which is `Type<string, string>`, or, the identity: because every string is a string. Constructing our own types let us have all the implementation we need in an isolated and easily composable.
 
 So in our app, we need to implement a `Type<string, Stream>`, or — a type that reads a `string` and outputs a `Stream`:
 
 ```ts
 // ReadStream.ts
 
-import { Type } from 'cmd-ts';
+import { Type } from '@watts-ai/cli.ts';
 import fs from 'fs';
 
 // Type<string, Stream> reads as "A type from `string` to `Stream`"
@@ -72,7 +72,7 @@ Using the type we've just created is no different that using `string`:
 ```ts
 // my-app.ts
 
-import { command, run, positional } from 'cmd-ts';
+import { command, run, positional } from '@watts-ai/cli.ts';
 
 const app = command({
   // name: ...,

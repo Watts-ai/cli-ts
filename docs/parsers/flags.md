@@ -32,7 +32,7 @@ This parser will fail to parse if:
 ### Usage
 
 ```ts
-import { command, boolean, flag } from 'cmd-ts';
+import { command, boolean, flag } from '@watts-ai/cli.ts';
 
 const myFlag = flag({
   type: boolean,
@@ -51,7 +51,7 @@ const cmd = command({
 The `onMissing` callback provides a way to dynamically generate values when a flag is not provided. This is useful for environment-based defaults, configuration file lookups, or user prompts.
 
 ```ts
-import { command, flag } from 'cmd-ts';
+import { command, flag } from '@watts-ai/cli.ts';
 
 const verboseFlag = flag({
   long: 'verbose',
