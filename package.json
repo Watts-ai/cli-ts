@@ -16,16 +16,16 @@
 		"build": "tsc && tsc --project ./tsconfig.esm.json",
 		"lint": "biome check src test example",
 		"now-build": "mdbook build --dest-dir=public",
-		"start": "pnpm build --watch",
-		"prepublishOnly": "rm -rf dist && pnpm build && pnpm test",
+		"start": "npm run build -- --watch",
+		"prepublishOnly": "rm -rf dist && npm run build && npm test",
 		"test": "vitest",
 		"ts-node": "tsx",
-		"changeset:version": "changeset version && pnpm install --no-frozen-lockfile",
-		"changeset:publish": "pnpm run build && changeset publish"
+		"changeset:version": "changeset version && npm install --no-lockfile",
+		"changeset:publish": "npm run build && changeset publish"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "pnpm lint"
+			"pre-commit": "npm run lint"
 		}
 	},
 	"sideEffects": false,
@@ -62,6 +62,5 @@
 		"typedoc": "0.28.5",
 		"typescript": "5.8.3",
 		"vitest": "3.2.4"
-	},
-	"packageManager": "pnpm@10.11.1"
+	}
 }
