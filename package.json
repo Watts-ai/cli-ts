@@ -1,7 +1,8 @@
 {
-	"name": "@watts-ai/cli.ts",
+	"name": "@watts-ai/cli-ts",
 	"version": "0.14.3",
 	"homepage": "https://github.com/watts-ai/cli.ts",
+	"repository": "https://github.com/watts-ai/cli.ts",
 	"license": "MIT",
 	"author": "Watts AI",
 	"main": "dist/cjs/index.js",
